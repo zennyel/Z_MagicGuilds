@@ -1,0 +1,38 @@
+Quest_ranks:
+  menu_title: "§6Quests Menu"
+  rank_f:
+    displayName: ""
+    material: WOOL
+    lore:
+      - ''
+  rank_e:
+    displayName: ""
+    material: WOOL
+    lore:
+      - ''
+  rank_d:
+    displayName: ""
+    material: WOOL
+    lore:
+      - ''
+  rank_c:
+    displayName: ""
+    material: WOOL
+    lore:
+      - ''
+  rank_b:
+    displayName: ""
+    material: WOOL
+    lore:
+      - ''
+  rank_a:
+    displayName: ""
+    material: WOOL
+    lore:
+      - ''
+  rank_s:
+    displayName: ""
+    material: WOOL
+    lore:
+      - ''
+
