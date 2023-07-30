@@ -1,8 +1,11 @@
-name: Z_MagicGuilds
+name: ZMagicGuilds
 version: '${project.version}'
-main: com.zennyel.Z_MagicGuilds
+main: com.zennyel.GuildsPlugin
 api-version: 1.8
+permissions:
+  zmagic.use:
+    description: "basic permission"
 commands:
-  quests:
+  guilds:
     description: "main command for this plugin"
-depend: [Z_Magic]
+softdepend: [Z_Magic]

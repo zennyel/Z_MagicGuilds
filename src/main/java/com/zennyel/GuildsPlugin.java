@@ -1,7 +1,9 @@
 package com.zennyel;
 
-import com.zennyel.command.GuildCommand;
-import com.zennyel.listener.InventoryClickListener;
+import com.zennyel.guilds.GuildPlaceHolderExpansion;
+import com.zennyel.guilds.command.GuildCommand;
+import com.zennyel.guilds.database.AdventurerDAO;
+import com.zennyel.guilds.listener.InventoryClickListener;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -9,15 +11,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class GuildsPlugin extends JavaPlugin {
 
     private long startTime;
-
     @Override
-    public void onDisable() {
+    public void onEnable(){
         init();
     }
-
     @Override
-    public void onEnable() {
-        shutdown();
+    public void onDisable(){
+
     }
 
     //initialize main modules.
@@ -26,8 +26,10 @@ public class GuildsPlugin extends JavaPlugin {
         saveDefaultConfig();
         getLogger().info("Start loading...");
 
+        loadDAO();
         registerListener();
         registerCommand();
+        registerPlaceholder();
 
         long endTime = System.currentTimeMillis();
         long loadTime = endTime - startTime;
@@ -35,7 +37,10 @@ public class GuildsPlugin extends JavaPlugin {
     }
 
     public void shutdown(){
+    }
 
+    public void loadDAO(){
+        new AdventurerDAO(this).createTable();
     }
 
     public void registerListener(){
@@ -45,6 +50,10 @@ public class GuildsPlugin extends JavaPlugin {
 
     public void registerCommand(){
         getCommand("guilds").setExecutor(new GuildCommand(this));
+    }
+
+    public void registerPlaceholder(){
+        new GuildPlaceHolderExpansion().register();
     }
 
 
