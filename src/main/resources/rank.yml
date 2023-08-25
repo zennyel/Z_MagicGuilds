@@ -1,0 +1,13 @@
+Rank:
+  F: 500
+  E: 1000
+  D: 1500
+  C: 2500
+  B: 3500
+  A: 4000
+  S: 5000
+
+Fame:
+  1000:
+    reward: "give <player>"
+    message: "&cCongratulations, you have reached 1000 fame"

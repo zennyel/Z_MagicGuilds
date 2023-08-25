@@ -47,6 +47,13 @@ public class ConfigLoader {
         return new ArrayList<>(); // Return an empty list if the path doesn't exist or is not a list.
     }
 
+    public Double getDouble(String path){
+        if (fileConfiguration.contains(path) && fileConfiguration.isInt(path)) {
+            return fileConfiguration.getDouble(path);
+        }
+        return null; // Return null if the path doesn't exist or is not an Double.
+    }
+
     public Integer getInt(String path) {
         if (fileConfiguration.contains(path) && fileConfiguration.isInt(path)) {
             return fileConfiguration.getInt(path);
@@ -57,7 +64,7 @@ public class ConfigLoader {
 
     public String getString(String path) {
         if (fileConfiguration.contains(path) && fileConfiguration.isString(path)) {
-            return fileConfiguration.getString(path);
+            return fileConfiguration.getString(path).replace("&", "§");
         }
 
         return null; // Return null if the path doesn't exist or is not a string.
@@ -65,7 +72,7 @@ public class ConfigLoader {
     public ItemStack getItemStack(String path){
         ItemStack is = ItemStackUtils.getItemFromConfiguration(path, fileConfiguration);
         ItemMeta itemMeta = is.getItemMeta();
-        itemMeta.addItemFlags(new ItemFlag[] { ItemFlag.HIDE_UNBREAKABLE });
+        itemMeta.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         is.setItemMeta(itemMeta);
         return is;
     }

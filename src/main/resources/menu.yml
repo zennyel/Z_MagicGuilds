@@ -1,38 +1,45 @@
 Quest_ranks:
-  menu_title: "§6Quests Menu"
+  menu_title: "&6Ranks Menu"
   rank_f:
-    displayName: ""
-    material: WOOL
+    displayName: "&6Rank F"
+    material: WOOD
     lore:
-      - ''
+      - '&7Click to open quests menu'
   rank_e:
-    displayName: ""
-    material: WOOL
+    displayName: "&6Rank E"
+    material: COBBLESTONE
     lore:
-      - ''
+      - '&7Click to open quests menu'
   rank_d:
-    displayName: ""
-    material: WOOL
+    displayName: "&6Rank D"
+    material: COAL_BLOCK
     lore:
-      - ''
+      - '&7Click to open quests menu'
   rank_c:
-    displayName: ""
-    material: WOOL
+    displayName: "&6Rank C"
+    material: IRON_BLOCK
     lore:
-      - ''
+      - '&7Click to open quests menu'
   rank_b:
-    displayName: ""
-    material: WOOL
+    displayName: "&6Rank B"
+    material: GOLD_BLOCK
     lore:
-      - ''
+      - '&7Click to open quests menu'
   rank_a:
-    displayName: ""
-    material: WOOL
+    displayName: "&6Rank A"
+    material: DIAMOND_BLOCK
     lore:
-      - ''
+      - '&7Click to open quests menu'
   rank_s:
-    displayName: ""
-    material: WOOL
+    displayName: "&6Rank S"
+    material: EMERALD_BLOCK
     lore:
-      - ''
+      - '&7Click to open quests menu'
+
+Quest_menu:
+  menu_title: "&6Quests Menu"
+
+Quest_profile:
+  menu_title: "&6Profile Menu"
+
 

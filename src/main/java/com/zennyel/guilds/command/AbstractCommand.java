@@ -11,8 +11,8 @@ public abstract class AbstractCommand implements CommandExecutor {
         return false;
     }
 
-    public void handleCommands(CommandSender sender, Command command, String s, String[] args){
-
+    public boolean handleCommands(CommandSender sender, Command command, String s, String[] args){
+        return false;
     }
 
 

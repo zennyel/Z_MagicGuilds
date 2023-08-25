@@ -1,0 +1,29 @@
+
+# Quest Ranks: f, e, d, c, b, a, s
+# Quest Types: kill, mining, boss, catching, building, leveling, traveling, player_kill
+
+Quests:
+    #Quest id here
+    1:
+      name: "&6Building"
+      rank: F #must be capital
+      type: building
+      reward: "&6A hundred money"
+      reward_command: "vault give <player> 100"
+      reward_fame: 1
+      reward_exp: 1
+      cooldown: 1000 #in seconds
+      coordinates:
+        world: "world"
+        x: 100
+        y: 10
+        z: 100
+      count: 10 #For all, include leveling (leveling just needs count"
+      player_class: #availabes HUMAN, MAGE, DEMON (must be capital) for player_kill
+      mob_name: #For kill
+      mob_type: #put "human" if is kill player
+      boss_name: #For boss
+      block_material: WOOL #For building, or mining
+      item_name:  #For catching
+      item_id:
+

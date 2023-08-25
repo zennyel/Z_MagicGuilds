@@ -1,21 +1,21 @@
 package com.zennyel.guilds.event;
 
 import com.zennyel.guilds.guild.Adventurer;
-import com.zennyel.guilds.guild.Rank;
 import org.bukkit.entity.Player;
 
-public class RankChangeEvent extends AbstractEvent{
+public class FameChangeEvent extends AbstractEvent{
 
     Player player;
     private Adventurer adventurer;
-    private Rank oldRank;
-    private Rank newRank;
 
-    public RankChangeEvent(Player player, Adventurer adventurer, Rank oldRank, Rank newRank) {
+    private int oldFame;
+    private int newFame;
+
+    public FameChangeEvent(Player player, Adventurer adventurer, int oldFame, int newFame) {
         this.player = player;
         this.adventurer = adventurer;
-        this.oldRank = oldRank;
-        this.newRank = newRank;
+        this.oldFame = oldFame;
+        this.newFame = newFame;
     }
 
     public Player getPlayer() {
@@ -34,19 +34,19 @@ public class RankChangeEvent extends AbstractEvent{
         this.adventurer = adventurer;
     }
 
-    public Rank getOldRank() {
-        return oldRank;
+    public int getOldFame() {
+        return oldFame;
     }
 
-    public void setOldRank(Rank oldRank) {
-        this.oldRank = oldRank;
+    public void setOldFame(int oldFame) {
+        this.oldFame = oldFame;
     }
 
-    public Rank getNewRank() {
-        return newRank;
+    public int getNewFame() {
+        return newFame;
     }
 
-    public void setNewRank(Rank newRank) {
-        this.newRank = newRank;
+    public void setNewFame(int newFame) {
+        this.newFame = newFame;
     }
 }

@@ -1,0 +1,7 @@
+Database:
+  use-mysql: false
+  port: 3306
+  username: root
+  password: vertrigo
+  host: localhost
+  database: zmagic

@@ -22,22 +22,20 @@ public abstract class AbstractGUI {
         this.instance = instance;
     }
 
-    public ItemStack Item(Material material, String displayName, String description, int slotPosition){
-        ItemStack item = new ItemStack(material);
+    public ItemStack Item(Material material, String displayName, String description, int slotPosition, short data){
+        ItemStack item = new ItemStack(material, 1, data);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(displayName);
         ArrayList<String> lore = new ArrayList<String>();
         lore.add(description);
         meta.setLore(lore);
-        MaterialData materialData = item.getData();
-        materialData.setData(DyeColor.GREEN.getDyeData());
         item.setItemMeta(meta);
         inventory.setItem(slotPosition, item);
         return null;
     }
 
-    public ItemStack Item(Material material, String displayName,List<String> description, int slotPosition){
-        ItemStack item = new ItemStack(material);
+    public ItemStack Item(Material material, String displayName,List<String> description, int slotPosition, short data){
+        ItemStack item = new ItemStack(material, 1, data);
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName(displayName);
         meta.setLore(description);
